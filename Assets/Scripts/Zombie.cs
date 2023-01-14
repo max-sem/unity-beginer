@@ -20,7 +20,14 @@ public class Zombie
 
     public void PrintStatus()
     {
-        Debug.Log($"Имя зомби: {name} , съел {exp} котиков");
+        // Reset(); // внутри объекта закрытый метод работает
+        Debug.Log($"Имя зомби: {name} , съел {exp} котиков");       
+    }
+
+    private void Reset() // закрытый метод сброса свойств зомби
+    {
+        this.name = "Я не знаю, кто я";
+        this.exp = 0;
     }
 
 }
