@@ -18,7 +18,7 @@ public class Zombie
     }
 
 
-    public void PrintStatus()
+    public virtual void PrintStatus()
     {
         // Reset(); // внутри объекта закрытый метод работает
         Debug.Log($"Имя зомби: {name} , съел {exp} котиков");       
