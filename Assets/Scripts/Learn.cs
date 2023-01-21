@@ -253,10 +253,7 @@ public class Learn : MonoBehaviour
         // -------------- Пример ссылочного типа (класс)
         
         var zombie = new Zombie("Никодим");
-        var zombie_2 = zombie;
-
-        zombie_2.name = "Васек";
-
+        var zombie_2 = new Zombie();        
         zombie.PrintStatus();
         zombie_2.PrintStatus();
         
@@ -276,14 +273,7 @@ public class Learn : MonoBehaviour
         // -------------- Инкапсуляция
         // zombie.Reset(); // закрытый метод не может быть вызван из другого объекта
 
-        // -------------- Наследование, Композиция, Полиморфизм
-
-        var zombie_3 = new Ugly_Zombie("Вася", gun);
-        zombie_3.PrintStatus();
-        
-
-
-
+     
 
     }
 
