@@ -10,4 +10,10 @@ public class Ugly_Zombie : Zombie
     {
         this.weapon = weapon;   
     }
+    public override void PrintStatus()
+    {
+    
+        Debug.Log($"Имя зомби: {name} , съел {exp} котиков и таскает {weapon.name} урон которого {weapon.damage}");
+    }
+
 }

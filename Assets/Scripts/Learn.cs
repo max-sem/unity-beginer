@@ -13,7 +13,8 @@ public class Learn : MonoBehaviour
     public string firstName = "Максим";
     public string secondName = "Семичастнов";
     public float pi = 3.14f;
-    public bool isDie = false;
+    public bool isDie = false;    
+    private Transform camTransform;
 
 
     /// <summary>
@@ -32,10 +33,8 @@ public class Learn : MonoBehaviour
         // ForeachExample();
         // WhileExample();
         // Test003();
-        OOPExamle();
-
-
-
+        // OOPExamle();
+        OOPAccess();
     }
 
     /// <summary>
@@ -252,17 +251,19 @@ public class Learn : MonoBehaviour
     {
         // -------------- Пример ссылочного типа (класс)
 
-        var zombie = new Ugly_Zombie("Афанасий");
+        var kalash = new Weapon("АК-74", 144);
+
+        var zombie = new Ugly_Zombie("Афанасий", kalash);
         zombie.PrintStatus();
 
 
 
 
-
         /*
+     
+        
         var zombie = new Zombie("Никодим");
         var zombie_2 = new Zombie();
-
         
         zombie_2.PrintStatus();
         */
@@ -288,6 +289,16 @@ public class Learn : MonoBehaviour
 
     }
 
+    void OOPAccess()
+    {
+        camTransform = this.GetComponent<Transform>();
+        Debug.Log($"Позиция: {camTransform.localPosition}" );
+        Debug.Log($"Позиция: {camTransform.localRotation}");
+
+
+
+
+    }
 
 
 
