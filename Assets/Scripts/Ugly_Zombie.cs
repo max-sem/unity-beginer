@@ -1,21 +1,21 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ugly_Zombie : Zombie // Уродливый зомби - наследник класса Зомби
+public class Ugly_Zombie : Zombie // РЈСЂРѕРґР»РёРІС‹Р№ Р·РѕРјР±Рё - РЅР°СЃР»РµРґРЅРёРє РєР»Р°СЃСЃР° Р—РѕРјР±Рё
 {
-    public Weapon weapon; // Композиция - в класс запихиваем  другой класс (или структуру)
+    public Weapon weapon; // РљРѕРјРїРѕР·РёС†РёСЏ - РІ РєР»Р°СЃСЃ Р·Р°РїРёС…РёРІР°РµРј  РґСЂСѓРіРѕР№ РєР»Р°СЃСЃ (РёР»Рё СЃС‚СЂСѓРєС‚СѓСЂСѓ)
 
-    public Ugly_Zombie(string name, Weapon weapon) : base(name) // вызов родительского конструктора 
+    public Ugly_Zombie(string name, Weapon weapon) : base(name) // РІС‹Р·РѕРІ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 
     {
-        // Конструктор Ugly_Zombie передает параметр name в конструктор Zombie
+        // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Ugly_Zombie РїРµСЂРµРґР°РµС‚ РїР°СЂР°РјРµС‚СЂ name РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Zombie
 
-        // параметр weapon - уже собственный Ugly_Zombie
+        // РїР°СЂР°РјРµС‚СЂ weapon - СѓР¶Рµ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ Ugly_Zombie
         this.weapon = weapon;
     }
     public override void PrintStatus()
     {        
-        Debug.Log($"Имя зомби: {name} , получил {weapon.name}");
+        Debug.Log($"РРјСЏ Р·РѕРјР±Рё: {name} , РїРѕР»СѓС‡РёР» {weapon.name}");
     }
 
 }

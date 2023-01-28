@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,26 +7,26 @@ public class Zombie
     public string name;
     public int exp = 0;
 
-    public Zombie(string name) // конструктор 
+    public Zombie(string name) // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 
     {
         this.name = name;
     }
     
-    public Zombie() // конструктор 
+    public Zombie() // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 
     {
-        name = "Я не знаю, кто я" ;
+        name = "РЇ РЅРµ Р·РЅР°СЋ, РєС‚Рѕ СЏ" ;
     }
 
 
     public virtual void PrintStatus()
     {
-        // Reset(); // внутри объекта закрытый метод работает
-        Debug.Log($"Имя зомби: {name} , съел {exp} котиков");       
+        // Reset(); // РІРЅСѓС‚СЂРё РѕР±СЉРµРєС‚Р° Р·Р°РєСЂС‹С‚С‹Р№ РјРµС‚РѕРґ СЂР°Р±РѕС‚Р°РµС‚
+        Debug.Log($"РРјСЏ Р·РѕРјР±Рё: {name} , СЃСЉРµР» {exp} РєРѕС‚РёРєРѕРІ");       
     }
 
-    private void Reset() // закрытый метод сброса свойств зомби
+    private void Reset() // Р·Р°РєСЂС‹С‚С‹Р№ РјРµС‚РѕРґ СЃР±СЂРѕСЃР° СЃРІРѕР№СЃС‚РІ Р·РѕРјР±Рё
     {
-        this.name = "Я не знаю, кто я";
+        this.name = "РЇ РЅРµ Р·РЅР°СЋ, РєС‚Рѕ СЏ";
         this.exp = 0;
     }
 
@@ -45,7 +45,7 @@ public struct Weapon
 
     public void PrintWeaponStatus()
     {
-        Debug.LogFormat("Оружие: {0} - {1} урона", name, damage);
+        Debug.LogFormat("РћСЂСѓР¶РёРµ: {0} - {1} СѓСЂРѕРЅР°", name, damage);
     }
 
 }
