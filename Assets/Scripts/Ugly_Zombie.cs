@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class Ugly_Zombie : Zombie
     public override void PrintStatus()
     {
     
-        Debug.Log($"Имя зомби: {name} , съел {exp} котиков и таскает {weapon.name} урон которого {weapon.damage}");
+        Debug.Log($"РРјСЏ Р·РѕРјР±Рё: {name} , СЃСЉРµР» {exp} РєРѕС‚РёРєРѕРІ Рё С‚Р°СЃРєР°РµС‚ {weapon.name} СѓСЂРѕРЅ РєРѕС‚РѕСЂРѕРіРѕ {weapon.damage}");
     }
 
 }

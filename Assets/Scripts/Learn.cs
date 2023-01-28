@@ -1,29 +1,29 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 
 /// <summary>
-/// Класс содержит примеры языка C#
-/// MonoBehavior означает, что этот класс может быть присоединен к GameObject в сцене Unity
+/// РљР»Р°СЃСЃ СЃРѕРґРµСЂР¶РёС‚ РїСЂРёРјРµСЂС‹ СЏР·С‹РєР° C#
+/// MonoBehavior РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ СЌС‚РѕС‚ РєР»Р°СЃСЃ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСЂРёСЃРѕРµРґРёРЅРµРЅ Рє GameObject РІ СЃС†РµРЅРµ Unity
 /// </summary>
 public class Learn : MonoBehaviour
 {
-    public string firstName = "Максим";
-    public string secondName = "Семичастнов";
+    public string firstName = "РњР°РєСЃРёРј";
+    public string secondName = "РЎРµРјРёС‡Р°СЃС‚РЅРѕРІ";
     public float pi = 3.14f;
     public bool isDie = false;    
     private Transform camTransform;
 
 
     /// <summary>
-    /// Содержит вызовы всех методов с примерами
+    /// РЎРѕРґРµСЂР¶РёС‚ РІС‹Р·РѕРІС‹ РІСЃРµС… РјРµС‚РѕРґРѕРІ СЃ РїСЂРёРјРµСЂР°РјРё
     /// </summary>
     void Start()
     {
         // CalcAge();
-        // Debug.Log($"Меня зовут {GetName(firstName, secondName)}");
+        // Debug.Log($"РњРµРЅСЏ Р·РѕРІСѓС‚ {GetName(firstName, secondName)}");
         // IfExample();
         // SwitchExample();
         // ArrayExample();
@@ -38,7 +38,7 @@ public class Learn : MonoBehaviour
     }
 
     /// <summary>
-    /// Пример метода с 2-мя параметрами, который возвращает склеенную строку
+    /// РџСЂРёРјРµСЂ РјРµС‚РѕРґР° СЃ 2-РјСЏ РїР°СЂР°РјРµС‚СЂР°РјРё, РєРѕС‚РѕСЂС‹Р№ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРєР»РµРµРЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ
     /// </summary>                            
     string GetName(string fn, string ln)
     {
@@ -46,25 +46,25 @@ public class Learn : MonoBehaviour
     }
 
     /// <summary>
-    /// Пример метода с использованием строковой интерполяции и параметров
+    /// РџСЂРёРјРµСЂ РјРµС‚РѕРґР° СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃС‚СЂРѕРєРѕРІРѕР№ РёРЅС‚РµСЂРїРѕР»СЏС†РёРё Рё РїР°СЂР°РјРµС‚СЂРѕРІ
     /// </summary>    
     void CalcAge()
     {
-        Debug.Log("Возраст героя {age} лет");
-        Debug.Log($"Меня зовут {firstName} {secondName}");
-        Debug.LogFormat("Меня зовут {0} {1}", firstName, secondName);
+        Debug.Log("Р’РѕР·СЂР°СЃС‚ РіРµСЂРѕСЏ {age} Р»РµС‚");
+        Debug.Log($"РњРµРЅСЏ Р·РѕРІСѓС‚ {firstName} {secondName}");
+        Debug.LogFormat("РњРµРЅСЏ Р·РѕРІСѓС‚ {0} {1}", firstName, secondName);
     }
     void IfExample()
     {
         bool haveKey = false;
         if (haveKey)
         {
-            Debug.Log("Сундук открыт");
+            Debug.Log("РЎСѓРЅРґСѓРє РѕС‚РєСЂС‹С‚");
             haveKey = false;
         }
         else
         {
-            Debug.Log("Найти ключ");
+            Debug.Log("РќР°Р№С‚Рё РєР»СЋС‡");
         }
     }
     void SwitchExample()
@@ -74,17 +74,17 @@ public class Learn : MonoBehaviour
         switch (heroAction)
         {
             case "Heal":
-                Debug.Log("Здоровье восстановлено");
+                Debug.Log("Р—РґРѕСЂРѕРІСЊРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРѕ");
                 break;
             case "Attack":
-                Debug.Log("Хозяина, меня убивают!");
+                Debug.Log("РҐРѕР·СЏРёРЅР°, РјРµРЅСЏ СѓР±РёРІР°СЋС‚!");
                 break;
             case "Go":
             case "Run":
-                Debug.Log("Я иду или бегу!");
+                Debug.Log("РЇ РёРґСѓ РёР»Рё Р±РµРіСѓ!");
                 break;
             default:
-                Debug.Log("Что-то непонятное творится вокруг...");
+                Debug.Log("Р§С‚Рѕ-С‚Рѕ РЅРµРїРѕРЅСЏС‚РЅРѕРµ С‚РІРѕСЂРёС‚СЃСЏ РІРѕРєСЂСѓРі...");
                 break;
         }
     }
@@ -92,26 +92,26 @@ public class Learn : MonoBehaviour
     {
         int myZombie = 1;
         string[] arrayZombie = new string[3];
-        arrayZombie[0] = "зомби Вася";
-        arrayZombie[1] = "зомби Петя";
-        arrayZombie[2] = "зомби Стас";
+        arrayZombie[0] = "Р·РѕРјР±Рё Р’Р°СЃСЏ";
+        arrayZombie[1] = "Р·РѕРјР±Рё РџРµС‚СЏ";
+        arrayZombie[2] = "Р·РѕРјР±Рё РЎС‚Р°СЃ";
         Debug.Log($"{arrayZombie[0]}, {arrayZombie[1]}, {arrayZombie[2]}");
         
         Debug.Log(string.Join(",", arrayZombie));
 
         int[] arrayScores = {115, 144, 47};
 
-        Debug.Log($"Наш {arrayZombie[myZombie]} съел {arrayScores[myZombie]} котенка");
+        Debug.Log($"РќР°С€ {arrayZombie[myZombie]} СЃСЉРµР» {arrayScores[myZombie]} РєРѕС‚РµРЅРєР°");
     }
     void ListExample()
     {
         List<string> listZombie = new List<string>() 
-        {"зомби Вася", "зомби Петя"};
+        {"Р·РѕРјР±Рё Р’Р°СЃСЏ", "Р·РѕРјР±Рё РџРµС‚СЏ"};
              
-        listZombie.Add("зомби Стас");
+        listZombie.Add("Р·РѕРјР±Рё РЎС‚Р°СЃ");
         Debug.Log(string.Join(",", listZombie));
 
-        listZombie.Insert(1, "зомби Никодим");
+        listZombie.Insert(1, "Р·РѕРјР±Рё РќРёРєРѕРґРёРј");
 
         Debug.Log(string.Join(",", listZombie));
 
@@ -123,33 +123,33 @@ public class Learn : MonoBehaviour
     {
         Dictionary<string, int> dictZombie = new Dictionary<string, int>
         {
-            { "зомби Вася", 115},
-            { "зомби Петя", 144},
+            { "Р·РѕРјР±Рё Р’Р°СЃСЏ", 115},
+            { "Р·РѕРјР±Рё РџРµС‚СЏ", 144},
         };
 
-        Debug.Log($"зомби Вася съел {dictZombie["зомби Вася"]} котиков");
+        Debug.Log($"Р·РѕРјР±Рё Р’Р°СЃСЏ СЃСЉРµР» {dictZombie["Р·РѕРјР±Рё Р’Р°СЃСЏ"]} РєРѕС‚РёРєРѕРІ");
         
-        dictZombie["зомби Вася"] += 1;
-        Debug.Log($"зомби Вася съел {dictZombie["зомби Вася"]} котиков");
+        dictZombie["Р·РѕРјР±Рё Р’Р°СЃСЏ"] += 1;
+        Debug.Log($"Р·РѕРјР±Рё Р’Р°СЃСЏ СЃСЉРµР» {dictZombie["Р·РѕРјР±Рё Р’Р°СЃСЏ"]} РєРѕС‚РёРєРѕРІ");
 
-        dictZombie.Add("зомби Стаc", 47);
-        Debug.Log($"зомби Стас съел {dictZombie["зомби Стаc"]} котиков");
+        dictZombie.Add("Р·РѕРјР±Рё РЎС‚Р°c", 47);
+        Debug.Log($"Р·РѕРјР±Рё РЎС‚Р°СЃ СЃСЉРµР» {dictZombie["Р·РѕРјР±Рё РЎС‚Р°c"]} РєРѕС‚РёРєРѕРІ");
 
-        dictZombie["зомби Никодим"] = 1;
-        Debug.Log($"Новый зомби Никодим съел {dictZombie["зомби Никодим"]} котика");
+        dictZombie["Р·РѕРјР±Рё РќРёРєРѕРґРёРј"] = 1;
+        Debug.Log($"РќРѕРІС‹Р№ Р·РѕРјР±Рё РќРёРєРѕРґРёРј СЃСЉРµР» {dictZombie["Р·РѕРјР±Рё РќРёРєРѕРґРёРј"]} РєРѕС‚РёРєР°");
     }
     void ForExample()
     {
         List<string> listZombie = new List<string>()
-        {"зомби Вася", "зомби Петя",  "зомби Стас", "зомби Никодим" };
+        {"Р·РѕРјР±Рё Р’Р°СЃСЏ", "Р·РѕРјР±Рё РџРµС‚СЏ",  "Р·РѕРјР±Рё РЎС‚Р°СЃ", "Р·РѕРјР±Рё РќРёРєРѕРґРёРј" };
 
-        /// Пример метода с for (initializer; condition; iterator)
+        /// РџСЂРёРјРµСЂ РјРµС‚РѕРґР° СЃ for (initializer; condition; iterator)
         for (int i = 0; i < listZombie.Count; i++ )
         {
             Debug.Log(listZombie[i]);
-            if (listZombie[i] == "зомби Стас")
+            if (listZombie[i] == "Р·РѕРјР±Рё РЎС‚Р°СЃ")
             {
-                Debug.Log("Ты просто супер, Стас");
+                Debug.Log("РўС‹ РїСЂРѕСЃС‚Рѕ СЃСѓРїРµСЂ, РЎС‚Р°СЃ");
             }                
         }
     }
@@ -157,10 +157,10 @@ public class Learn : MonoBehaviour
     {
         Dictionary<string, int> dictZombie = new Dictionary<string, int>
         {
-            { "зомби Вася", 115},
-            { "зомби Петя", 144},
-            { "зомби Стас", 47},
-            { "зомби Никодим", 3}
+            { "Р·РѕРјР±Рё Р’Р°СЃСЏ", 115},
+            { "Р·РѕРјР±Рё РџРµС‚СЏ", 144},
+            { "Р·РѕРјР±Рё РЎС‚Р°СЃ", 47},
+            { "Р·РѕРјР±Рё РќРёРєРѕРґРёРј", 3}
         };
 
         string kidZombieName = "";
@@ -185,8 +185,8 @@ public class Learn : MonoBehaviour
             }
 
         }
-        Debug.Log($"Самый мелкий {kidZombieName} съел {dictZombie[kidZombieName]} котика");
-        Debug.Log($"Самый толстый {fatZombieName} съел {dictZombie[fatZombieName]} котика");
+        Debug.Log($"РЎР°РјС‹Р№ РјРµР»РєРёР№ {kidZombieName} СЃСЉРµР» {dictZombie[kidZombieName]} РєРѕС‚РёРєР°");
+        Debug.Log($"РЎР°РјС‹Р№ С‚РѕР»СЃС‚С‹Р№ {fatZombieName} СЃСЉРµР» {dictZombie[fatZombieName]} РєРѕС‚РёРєР°");
 
     }
     void WhileExample()
@@ -196,30 +196,30 @@ public class Learn : MonoBehaviour
 
         while (countCats > 500)
         {
-            Debug.Log($"На планете живет {countCats} котиков. Зомби не существует");
+            Debug.Log($"РќР° РїР»Р°РЅРµС‚Рµ Р¶РёРІРµС‚ {countCats} РєРѕС‚РёРєРѕРІ. Р—РѕРјР±Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
             countCats--; 
         }
 
         while (countCats > 100)
         {
-            Debug.Log($"Зомби видели в Монголии! В мире осталось {countCats} котиков.");
+            Debug.Log($"Р—РѕРјР±Рё РІРёРґРµР»Рё РІ РњРѕРЅРіРѕР»РёРё! Р’ РјРёСЂРµ РѕСЃС‚Р°Р»РѕСЃСЊ {countCats} РєРѕС‚РёРєРѕРІ.");
             countCats--;
         }
 
         while (countCats > 10)
         {
-            Debug.Log($"Зомби на улице! В мире осталось {countCats} котиков.");
+            Debug.Log($"Р—РѕРјР±Рё РЅР° СѓР»РёС†Рµ! Р’ РјРёСЂРµ РѕСЃС‚Р°Р»РѕСЃСЊ {countCats} РєРѕС‚РёРєРѕРІ.");
             countCats--;
         }
 
         while (countCats >= 0)
         {
-            Debug.Log($"В мире осталось {countCats} котиков. Зомби доедают последних");
+            Debug.Log($"Р’ РјРёСЂРµ РѕСЃС‚Р°Р»РѕСЃСЊ {countCats} РєРѕС‚РёРєРѕРІ. Р—РѕРјР±Рё РґРѕРµРґР°СЋС‚ РїРѕСЃР»РµРґРЅРёС…");
             countCats--;
         }
         
 
-        Debug.Log($"В мире не осталось котиков. На планете живет {countHamster} хомячков. Зомби не существует!");
+        Debug.Log($"Р’ РјРёСЂРµ РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ РєРѕС‚РёРєРѕРІ. РќР° РїР»Р°РЅРµС‚Рµ Р¶РёРІРµС‚ {countHamster} С…РѕРјСЏС‡РєРѕРІ. Р—РѕРјР±Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 
 
 
@@ -228,7 +228,7 @@ public class Learn : MonoBehaviour
     }
     void Test001()
     {
-        // Количество положительных чисел в массиве { -4, -3, -2, -1, 0, 1, 2, 3, 4 };
+        // РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР» РІ РјР°СЃСЃРёРІРµ { -4, -3, -2, -1, 0, 1, 2, 3, 4 };
         int[] A = { -4, -3, -2, -1, 0, 1, 2, 3, 4 };
         int countPlus = 0;
         for (int i =0; i < A.Length; i++)
@@ -249,11 +249,11 @@ public class Learn : MonoBehaviour
     }
     void OOPExamle()
     {
-        // -------------- Пример ссылочного типа (класс)
+        // -------------- РџСЂРёРјРµСЂ СЃСЃС‹Р»РѕС‡РЅРѕРіРѕ С‚РёРїР° (РєР»Р°СЃСЃ)
 
-        var kalash = new Weapon("АК-74", 144);
+        var kalash = new Weapon("РђРљ-74", 144);
 
-        var zombie = new Ugly_Zombie("Афанасий", kalash);
+        var zombie = new Ugly_Zombie("РђС„Р°РЅР°СЃРёР№", kalash);
         zombie.PrintStatus();
 
 
@@ -262,19 +262,19 @@ public class Learn : MonoBehaviour
         /*
      
         
-        var zombie = new Zombie("Никодим");
+        var zombie = new Zombie("РќРёРєРѕРґРёРј");
         var zombie_2 = new Zombie();
         
         zombie_2.PrintStatus();
         */
 
         /*
-        // -------------- Пример типа - значения (структура)
+        // -------------- РџСЂРёРјРµСЂ С‚РёРїР° - Р·РЅР°С‡РµРЅРёСЏ (СЃС‚СЂСѓРєС‚СѓСЂР°)
 
-       var bow = new Weapon("Лук боевой", 144);
+       var bow = new Weapon("Р›СѓРє Р±РѕРµРІРѕР№", 144);
        var gun = bow;
 
-       gun.name = "Ружье";
+       gun.name = "Р СѓР¶СЊРµ";
        gun.damage = 4000;
 
        bow.PrintWeaponStatus();
@@ -282,8 +282,8 @@ public class Learn : MonoBehaviour
        */
 
 
-        // -------------- Инкапсуляция
-        // zombie.Reset(); // закрытый метод не может быть вызван из другого объекта
+        // -------------- РРЅРєР°РїСЃСѓР»СЏС†РёСЏ
+        // zombie.Reset(); // Р·Р°РєСЂС‹С‚С‹Р№ РјРµС‚РѕРґ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІС‹Р·РІР°РЅ РёР· РґСЂСѓРіРѕРіРѕ РѕР±СЉРµРєС‚Р°
 
 
 
@@ -292,8 +292,8 @@ public class Learn : MonoBehaviour
     void OOPAccess()
     {
         camTransform = this.GetComponent<Transform>();
-        Debug.Log($"Позиция: {camTransform.localPosition}" );
-        Debug.Log($"Позиция: {camTransform.localRotation}");
+        Debug.Log($"РџРѕР·РёС†РёСЏ: {camTransform.localPosition}" );
+        Debug.Log($"РџРѕР·РёС†РёСЏ: {camTransform.localRotation}");
 
 
 
