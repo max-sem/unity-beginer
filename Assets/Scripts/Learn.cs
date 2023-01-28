@@ -251,13 +251,23 @@ public class Learn : MonoBehaviour
     void OOPExamle()
     {
         // -------------- Пример ссылочного типа (класс)
-        
-        var zombie = new Zombie("Никодим");
-        var zombie_2 = new Zombie();        
-        zombie.PrintStatus();
-        zombie_2.PrintStatus();
-        
 
+        var zombie = new Ugly_Zombie("Афанасий");
+        zombie.PrintStatus();
+
+
+
+
+
+        /*
+        var zombie = new Zombie("Никодим");
+        var zombie_2 = new Zombie();
+
+        
+        zombie_2.PrintStatus();
+        */
+
+        /*
         // -------------- Пример типа - значения (структура)
 
        var bow = new Weapon("Лук боевой", 144);
@@ -268,12 +278,13 @@ public class Learn : MonoBehaviour
 
        bow.PrintWeaponStatus();
        gun.PrintWeaponStatus();
+       */
 
 
         // -------------- Инкапсуляция
         // zombie.Reset(); // закрытый метод не может быть вызван из другого объекта
 
-     
+
 
     }
 
