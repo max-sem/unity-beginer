@@ -14,6 +14,7 @@ public class Learn : MonoBehaviour
     public string secondName = "Семичастнов";
     public float pi = 3.14f;
     public bool isDie = false;
+    private Transform CamTransform;
 
 
     /// <summary>
@@ -32,7 +33,8 @@ public class Learn : MonoBehaviour
         // ForeachExample();
         // WhileExample();
         // Test003();
-        OOPExamle();
+        // OOPExamle();
+        OOPAccess();
 
 
 
@@ -287,8 +289,11 @@ public class Learn : MonoBehaviour
 
     }
 
-
-
+    void OOPAccess() 
+    {
+        CamTransform = this.GetComponent<Transform>();
+        Debug.Log($"Позиция: {CamTransform.localPosition}") ;
+    }
 
 
 }
