@@ -14,7 +14,9 @@ public class Learn : MonoBehaviour
     public string secondName = "Семичастнов";
     public float pi = 3.14f;
     public bool isDie = false;
-    private Transform CamTransform;
+    private Transform testTransform;
+    public GameObject testCircle;
+    
 
 
     /// <summary>
@@ -294,19 +296,25 @@ public class Learn : MonoBehaviour
     /// </summary>
     void OOPAccess() 
     {
-        CamTransform = this.GetComponent<Transform>();
-        
-        // CamTransform.position = new Vector2(0, CamTransform.position.y + 5f); // изменяем позицию камеры через Vector2
+        // Пример для GetComponent
+        //1 testTransform = this.GetComponent<Transform>();        
+        //2 CamTransform.position = new Vector2(0, CamTransform.position.y + 5f); // изменяем позицию камеры через Vector2
+        //1 Debug.Log($"Позиция: {testTransform.localPosition}") ; // выводим информацию о позиции
 
-        Debug.Log($"Позиция: {CamTransform.localPosition}") ; // выводим информацию о позиции
+        // 4 Пример для Find 
+        testCircle = GameObject.Find("Circle"); // Ищем объект на сцене по имени
+        testTransform = testCircle.GetComponent<Transform>(); // Получаем компонент объекта по типу
+        
+        // 5 testTransform = GameObject.Find("Circle").GetComponent<Transform>(); // Ищем объект и компонент в одной строке
+
     }
 
     void Update() 
     {
+        // 3 Движение пойманного объекта
         float movementSpeed = 0.2f;
-
-        CamTransform.position = CamTransform.position + new Vector3(0, movementSpeed * Time.deltaTime); // изменяем позицию камеры через Vector3              
-        Debug.Log(transform.position);
+        testTransform.position = testTransform.position + new Vector3(0, movementSpeed * Time.deltaTime); // изменяем позицию камеры через Vector3              
+        Debug.Log($"y={transform.position.y}");
 
     }
 
