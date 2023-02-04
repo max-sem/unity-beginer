@@ -35,9 +35,6 @@ public class Learn : MonoBehaviour
         // Test003();
         // OOPExamle();
         OOPAccess();
-
-
-
     }
 
     /// <summary>
@@ -289,10 +286,28 @@ public class Learn : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Инициализируем CamTransform  с помощью метода GetComponent.  
+    /// Метод GetComponent находит компонент Transform, прикрепленный к этому компоненту GameObject, и возвращает его camTransform.
+    /// camTransform хранит объект Transform и у нас есть доступ ко всем его свойствам и методам класса
+    /// GetComponent имеет доступ только к компонентам объекта GameObject, к которому прикреплен вызывающий сценарий !!!
+    /// </summary>
     void OOPAccess() 
     {
         CamTransform = this.GetComponent<Transform>();
-        Debug.Log($"Позиция: {CamTransform.localPosition}") ;
+        
+        // CamTransform.position = new Vector2(0, CamTransform.position.y + 5f); // изменяем позицию камеры через Vector2
+
+        Debug.Log($"Позиция: {CamTransform.localPosition}") ; // выводим информацию о позиции
+    }
+
+    void Update() 
+    {
+        float movementSpeed = 0.2f;
+
+        CamTransform.position = CamTransform.position + new Vector3(0, movementSpeed * Time.deltaTime); // изменяем позицию камеры через Vector3              
+        Debug.Log(transform.position);
+
     }
 
 
