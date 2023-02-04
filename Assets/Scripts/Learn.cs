@@ -14,7 +14,8 @@ public class Learn : MonoBehaviour
     public string secondName = "Семичастнов";
     public float pi = 3.14f;
     public bool isDie = false;    
-    private Transform camTransform;
+    private Transform testTransform;
+    public GameObject testObject;
 
 
     /// <summary>
@@ -291,13 +292,19 @@ public class Learn : MonoBehaviour
 
     void OOPAccess()
     {
-        camTransform = this.GetComponent<Transform>();
-        Debug.Log($"Позиция: {camTransform.localPosition}" );
-        Debug.Log($"Позиция: {camTransform.localRotation}");
+        testObject = GameObject.Find("Point Light");
+        testTransform = testObject.GetComponent<Transform>();        
+        Debug.Log($"Позиция: {testTransform.localPosition}" );       
+        
 
+    }
 
+    void Update() 
+    {
+        float moveSpeed = 0.5f;
 
-
+        testTransform.position = testTransform.position + new Vector3(0, moveSpeed * Time.deltaTime);
+        Debug.Log($"Позиция: {testTransform.localPosition}");
     }
 
 
