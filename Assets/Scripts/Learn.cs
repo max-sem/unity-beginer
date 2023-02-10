@@ -303,7 +303,7 @@ public class Learn : MonoBehaviour
 
         // 4 Пример для Find 
         
-        // testCircle = GameObject.Find("Circle"); // Ищем объект на сцене по имени
+        testCircle = GameObject.Find("Barrier_01"); // Ищем объект на сцене по имени
         testTransform = testCircle.GetComponent<Transform>(); // Получаем компонент объекта по типу
         
         // 5 testTransform = GameObject.Find("Circle").GetComponent<Transform>(); // Ищем объект и компонент в одной строке
