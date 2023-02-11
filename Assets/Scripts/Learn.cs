@@ -292,7 +292,7 @@ public class Learn : MonoBehaviour
 
     void OOPAccess()
     {
-        testObject = GameObject.Find("Point Light");
+        testObject = GameObject.Find("Directional Light");
         testTransform = testObject.GetComponent<Transform>();        
         Debug.Log($"Позиция: {testTransform.localPosition}" );       
         
