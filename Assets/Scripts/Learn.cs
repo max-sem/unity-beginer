@@ -298,11 +298,10 @@ public class Learn : MonoBehaviour
     {
         // Пример для GetComponent
         //1 testTransform = this.GetComponent<Transform>();        
-        //2 CamTransform.position = new Vector2(0, CamTransform.position.y + 5f); // изменяем позицию камеры через Vector2
+        //2 testTransform.position = new Vector2(0, testTransform.position.y + 5f); // изменяем позицию камеры через Vector2
         //1 Debug.Log($"Позиция: {testTransform.localPosition}") ; // выводим информацию о позиции
 
         // 4 Пример для Find 
-        
         testCircle = GameObject.Find("Barrier_01"); // Ищем объект на сцене по имени
         testTransform = testCircle.GetComponent<Transform>(); // Получаем компонент объекта по типу
         
