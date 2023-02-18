@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,22 +13,22 @@ public class PlayerBehavior : MonoBehaviour
 
     void Update()
     {
-        // 3 Ловим изменение вертикальной оси (-1 0 1) и умножаем на скорость
-        // Ось - это Axes из системы ввода (W-S), а не вектор направления!!!
+        // 3 Р›РѕРІРёРј РёР·РјРµРЅРµРЅРёРµ РІРµСЂС‚РёРєР°Р»СЊРЅРѕР№ РѕСЃРё (-1 0 1) Рё СѓРјРЅРѕР¶Р°РµРј РЅР° СЃРєРѕСЂРѕСЃС‚СЊ
+        // РћСЃСЊ - СЌС‚Рѕ Axes РёР· СЃРёСЃС‚РµРјС‹ РІРІРѕРґР° (W-S), Р° РЅРµ РІРµРєС‚РѕСЂ РЅР°РїСЂР°РІР»РµРЅРёСЏ!!!
         vInput = Input.GetAxis("Vertical") * moveSpeed;
         
-        // 4 Ловим горизонтальное ВРАЩЕНИЕ !!! (-1 0 1) и умножаем на скорость
+        // 4 Р›РѕРІРёРј РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРµ Р’Р РђР©Р•РќРР• !!! (-1 0 1) Рё СѓРјРЅРѕР¶Р°РµРј РЅР° СЃРєРѕСЂРѕСЃС‚СЊ
         hInput = Input.GetAxis("Horizontal") * rotateSpeed;
 
         Debug.Log($"vInput: {vInput}, hInput: {hInput}");
 
-        // 5 Translate перемещает относительно ориентации !(относительно своей локальной оси Z)
-        //  Vector3.forward = Vector3(0, 0, 1)	- норммализованный вектор по Z
+        // 5 Translate РїРµСЂРµРјРµС‰Р°РµС‚ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РѕСЂРёРµРЅС‚Р°С†РёРё !(РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃРІРѕРµР№ Р»РѕРєР°Р»СЊРЅРѕР№ РѕСЃРё Z)
+        //  Vector3.forward = Vector3(0, 0, 1)	- РЅРѕСЂРјРјР°Р»РёР·РѕРІР°РЅРЅС‹Р№ РІРµРєС‚РѕСЂ РїРѕ Z
         this.transform.Translate(Vector3.forward * vInput * Time.deltaTime);
 
         // 6
-        // Vector3.up = Vector3(0, 1, 0) Вращение происходит ВОКРУГ указанной оси
-        // Был бы Translate для Vector3.up, то прыгнул бы
+        // Vector3.up = Vector3(0, 1, 0) Р’СЂР°С‰РµРЅРёРµ РїСЂРѕРёСЃС…РѕРґРёС‚ Р’РћРљР РЈР“ СѓРєР°Р·Р°РЅРЅРѕР№ РѕСЃРё
+        // Р‘С‹Р» Р±С‹ Translate РґР»СЏ Vector3.up, С‚Рѕ РїСЂС‹РіРЅСѓР» Р±С‹
         this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
     }
 }
