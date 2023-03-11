@@ -10,14 +10,26 @@ public class PlayerBehaviour : MonoBehaviour
     private float vInput;
     private float hInput;
 
+    private Rigidbody _rb;
+    private void Start()
+    {
+        _rb = this.GetComponent<Rigidbody>();
+    }
     void Update()
     {
         vInput = Input.GetAxis("Vertical") * moveSpeed;
-        this.transform.Translate(Vector3.forward * vInput * Time.deltaTime);
+        //this.transform.Translate(Vector3.forward * vInput * Time.deltaTime);
 
         hInput = Input.GetAxis("Horizontal") * rotateSpeed;
-        this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
-
-
+        //this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
     }
+    private void FixedUpdate()
+    {
+        Vector3 rotation = Vector3.up * hInput;
+        Quaternion angleRot = Quaternion.Euler(rotation * Time.fixedDeltaTime);
+        _rb.MovePosition(this.transform.position  + this.transform.forward * vInput * Time.fixedDeltaTime);
+        _rb.MoveRotation(_rb.rotation * angleRot);
+    }
+
+
 }
