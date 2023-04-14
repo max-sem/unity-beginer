@@ -13,10 +13,11 @@ public class Learn : MonoBehaviour
     public string firstName = "Максим";
     public string secondName = "Семичастнов";
     public float pi = 3.14f;
-    public bool isDie = false;
+    public bool isDie = false;    
     private Transform testTransform;
-    public GameObject testCircle;
-    
+    public GameObject testObject;
+    enum PlayerAction { Attack=13, Defend=7, Walk };
+    enum Color { Red = 12, Blue};
 
 
     /// <summary>
@@ -36,7 +37,8 @@ public class Learn : MonoBehaviour
         // WhileExample();
         // Test003();
         // OOPExamle();
-        OOPAccess();
+        // OOPAccess();
+        ENUM_Example();
     }
 
     /// <summary>
@@ -252,16 +254,25 @@ public class Learn : MonoBehaviour
     void OOPExamle()
     {
         // -------------- Пример ссылочного типа (класс)
+
+        var kalash = new Weapon("АК-74", 144);
+
+        var zombie = new Ugly_Zombie("Афанасий", kalash);
+        zombie.PrintStatus();
+
+
+
+
+        /*
+     
         
         var zombie = new Zombie("Никодим");
-        var zombie_2 = zombie;
-
-        zombie_2.name = "Васек";
-
-        zombie.PrintStatus();
-        zombie_2.PrintStatus();
+        var zombie_2 = new Zombie();
         
+        zombie_2.PrintStatus();
+        */
 
+        /*
         // -------------- Пример типа - значения (структура)
 
        var bow = new Weapon("Лук боевой", 144);
@@ -272,51 +283,43 @@ public class Learn : MonoBehaviour
 
        bow.PrintWeaponStatus();
        gun.PrintWeaponStatus();
+       */
 
 
         // -------------- Инкапсуляция
         // zombie.Reset(); // закрытый метод не может быть вызван из другого объекта
 
-        // -------------- Наследование, Композиция, Полиморфизм
-
-        var zombie_3 = new Ugly_Zombie("Вася", gun);
-        zombie_3.PrintStatus();
-        
-
-
 
 
     }
 
-    /// <summary>
-    /// Инициализируем CamTransform  с помощью метода GetComponent.  
-    /// Метод GetComponent находит компонент Transform, прикрепленный к этому компоненту GameObject, и возвращает его camTransform.
-    /// camTransform хранит объект Transform и у нас есть доступ ко всем его свойствам и методам класса
-    /// GetComponent имеет доступ только к компонентам объекта GameObject, к которому прикреплен вызывающий сценарий !!!
-    /// </summary>
-    void OOPAccess() 
+    void OOPAccess()
     {
-        // Пример для GetComponent
-        //1 testTransform = this.GetComponent<Transform>();        
-        //2 testTransform.position = new Vector2(0, testTransform.position.y + 5f); // изменяем позицию камеры через Vector2
-        //1 Debug.Log($"Позиция: {testTransform.localPosition}") ; // выводим информацию о позиции
-
-        // 4 Пример для Find 
-        testCircle = GameObject.Find("Barrier_01"); // Ищем объект на сцене по имени
-        testTransform = testCircle.GetComponent<Transform>(); // Получаем компонент объекта по типу
+        testObject = GameObject.Find("Directional Light");
+        testTransform = testObject.GetComponent<Transform>();        
+        Debug.Log($"Позиция: {testTransform.localPosition}" );       
         
-        // 5 testTransform = GameObject.Find("Circle").GetComponent<Transform>(); // Ищем объект и компонент в одной строке
 
     }
 
     void Update() 
     {
-        // 3 Движение пойманного объекта
-        float movementSpeed = 0.2f;
-        testTransform.position = testTransform.position + new Vector3(0, movementSpeed * Time.deltaTime); // изменяем позицию камеры через Vector3              
-        Debug.Log($"y={transform.position.y}");
-
+        /*
+        float moveSpeed = 0.5f;
+        testTransform.position = testTransform.position + new Vector3(0, moveSpeed * Time.deltaTime);
+        Debug.Log($"Позиция: {testTransform.localPosition}");
+        */
     }
 
+    void ENUM_Example() {
+        Debug.Log((int)PlayerAction.Attack);
+        Debug.Log((int)PlayerAction.Defend);
+    }
+       
 
+    
 }
+
+
+
+

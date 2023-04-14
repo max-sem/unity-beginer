@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ugly_Zombie : Zombie // Уродливый зомби - наследник класса Зомби
+public class Ugly_Zombie : Zombie
 {
-    public Weapon weapon; // Композиция - в класс запихиваем  другой класс (или структуру)
+    public Weapon weapon;
 
-    public Ugly_Zombie(string name, Weapon weapon) : base(name) // вызов родительского конструктора 
+    public Ugly_Zombie(string name, Weapon weapon) : base(name)
     {
-        // Конструктор Ugly_Zombie передает параметр name в конструктор Zombie
-
-        // параметр weapon - уже собственный Ugly_Zombie
-        this.weapon = weapon;
+        this.weapon = weapon;   
     }
     public override void PrintStatus()
-    {        
-        Debug.Log($"Имя зомби: {name} , получил {weapon.name}");
+    {
+    
+        Debug.Log($"Имя зомби: {name} , съел {exp} котиков и таскает {weapon.name} урон которого {weapon.damage}");
     }
 
 }
-
-
