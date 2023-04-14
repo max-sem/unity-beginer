@@ -123,6 +123,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &283890325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3204807947831202988, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
+  m_PrefabInstance: {fileID: 3204807946631741691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &283890332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283890325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c2d54d99f43124ba89040d82e6af8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rotateSpeed: 75
+  jumpVelocity: 10
 --- !u!1 &416076726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1143,7 @@ GameObject:
   - component: {fileID: 1614879724}
   - component: {fileID: 1614879723}
   - component: {fileID: 1614879726}
+  - component: {fileID: 1614879727}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1209,6 +1230,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camOffset: {x: 0, y: 1.2, z: -2.6}
+--- !u!114 &1614879727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614879722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be3158608aef594b9d845ded6ecf519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstName: "\u041C\u0430\u043A\u0441\u0438\u043C"
+  secondName: "\u0421\u0435\u043C\u0438\u0447\u0430\u0441\u0442\u043D\u043E\u0432"
+  pi: 3.14
+  isDie: 0
+  testObject: {fileID: 0}
 --- !u!1 &1634383243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,7 +1740,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3204807947831202982, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
 --- !u!1001 &7401464617213332188
 PrefabInstance:

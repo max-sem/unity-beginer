@@ -16,6 +16,8 @@ public class Learn : MonoBehaviour
     public bool isDie = false;    
     private Transform testTransform;
     public GameObject testObject;
+    enum PlayerAction { Attack=13, Defend=7, Walk };
+    enum Color { Red = 12, Blue};
 
 
     /// <summary>
@@ -35,7 +37,8 @@ public class Learn : MonoBehaviour
         // WhileExample();
         // Test003();
         // OOPExamle();
-        OOPAccess();
+        // OOPAccess();
+        ENUM_Example();
     }
 
     /// <summary>
@@ -301,13 +304,22 @@ public class Learn : MonoBehaviour
 
     void Update() 
     {
+        /*
         float moveSpeed = 0.5f;
-
         testTransform.position = testTransform.position + new Vector3(0, moveSpeed * Time.deltaTime);
         Debug.Log($"Позиция: {testTransform.localPosition}");
+        */
     }
 
+    void ENUM_Example() {
+        Debug.Log((int)PlayerAction.Attack);
+        Debug.Log((int)PlayerAction.Defend);
+    }
+       
 
-
-
+    
 }
+
+
+
+
