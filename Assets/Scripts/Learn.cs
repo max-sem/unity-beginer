@@ -16,7 +16,7 @@ public class Learn : MonoBehaviour
     public bool isDie = false;    
     private Transform testTransform;
     public GameObject testObject;
-    enum PlayerAction { Attack=13, Defend=7, Walk };
+    enum PlayerAction { Attack=13, Defend=7, Walk }; // перечисления
     enum Color { Red = 12, Blue};
 
 
@@ -38,7 +38,8 @@ public class Learn : MonoBehaviour
         // Test003();
         // OOPExamle();
         // OOPAccess();
-        ENUM_Example();
+        // ENUM_Example();
+        Get_Set_Example();
     }
 
     /// <summary>
@@ -292,7 +293,6 @@ public class Learn : MonoBehaviour
 
 
     }
-
     void OOPAccess()
     {
         testObject = GameObject.Find("Directional Light");
@@ -301,7 +301,6 @@ public class Learn : MonoBehaviour
         
 
     }
-
     void Update() 
     {
         /*
@@ -310,14 +309,18 @@ public class Learn : MonoBehaviour
         Debug.Log($"Позиция: {testTransform.localPosition}");
         */
     }
-
     void ENUM_Example() {
         Debug.Log((int)PlayerAction.Attack);
         Debug.Log((int)PlayerAction.Defend);
     }
-       
 
+    void Get_Set_Example() 
+    { 
     
+
+    }
+
+
 }
 
 
