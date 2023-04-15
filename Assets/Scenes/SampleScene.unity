@@ -128,7 +128,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3204807947831202988, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
   m_PrefabInstance: {fileID: 3204807946631741691}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &283890332
+--- !u!114 &283890326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +147,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 512
+  bullet: {fileID: 357017925889073213, guid: 71c36aef873429c43995eceb82640c4c, type: 3}
+  bulletSpeed: 100
 --- !u!1 &416076726
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +836,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 500492473418632195, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 592192523958252430, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -878,9 +884,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2068282029301289410, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656107071256171711, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5119415500271915457, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
       propertyPath: m_Name
       value: Tower_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119415500271915457, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170155632823003886, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796983336425072762, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d8223341c9178d499dfb2d5a94b8fad, type: 3}
@@ -1744,8 +1770,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3204807947831202982, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
 --- !u!1001 &7401464617213332188
 PrefabInstance:
