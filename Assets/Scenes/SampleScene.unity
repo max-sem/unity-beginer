@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f2b19b86c82d547a19aea719aa74cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  labelText: "\u0421\u043E\u0431\u0435\u0440\u0438 \u0432\u0441\u0435 4 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430
+    \u0438 \u043F\u043E\u043B\u0443\u0447\u0438 \u0441\u0432\u043E\u0431\u043E\u0434\u0443!"
+  maxItems: 4
 --- !u!4 &117259838
 Transform:
   m_ObjectHideFlags: 0
@@ -1742,6 +1745,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3204807947831202979, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204807947831202983, guid: 62eac44685da13a45aca3738e27b0262, type: 3}
       propertyPath: m_RootOrder
       value: 8
